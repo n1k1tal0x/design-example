@@ -32,6 +32,7 @@ body {
 .panel-content {
     width: 50%;
     background-color: #171717;
+    flex-direction: column;
 }
 
 .image-example {
@@ -70,7 +71,8 @@ body {
 }
 
 .preset-padding {
-    flex-direction: row;
+    flex-direction: column;
+    gap: 15px;
 }
 .nav-bottom {
     height: 10%;
@@ -150,5 +152,14 @@ body {
 }
 
 .preset-selector {
+    width: 100%;
+    height: 60px;
+    background-color: #1E1E1E;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
 
+.preset-btn-color {
+    background-color: #1E1E1E;
 }

@@ -39,10 +39,24 @@
             <div class="preset-padding">
                 <span class="preset-title ads-title">Пресет</span>
                 <div class="preset-selector">
-
+                    <button class="preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Низкие</button>
+                    <button class="preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Средние</button>
+                    <button class="preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Баланс</button>
+                    <button class="color-bottom-style preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Ультра</button>
                 </div>
             </div>
         </div>
+        <script>
+            <!-- preset-selector -->
+            function selectPreset(btn) {
+                document.querySelectorAll('.preset-btn-color').forEach(btn => {
+                    if (btn.classList.contains('color-bottom-style')) {
+                        btn.classList.remove('color-bottom-style');
+                    }
+                });
+                btn.classList.add('color-bottom-style');
+            }
+        </script>
 
         <div class="main-container image-example">
             <div class="img-padding">
