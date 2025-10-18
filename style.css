@@ -69,6 +69,9 @@ body {
     justify-content: center;
 }
 
+.preset-padding {
+    flex-direction: row;
+}
 .nav-bottom {
     height: 10%;
     margin-bottom: 10%;
@@ -147,5 +150,5 @@ body {
 }
 
 .preset-selector {
-    
+
 }
