@@ -52,12 +52,20 @@
                         <span class="preset-title ads-title">Тени</span>
                         <span id="option_status-shadow" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
                     </div>
-                    <input type="range" min="0" max="5" id="option_slider-shadow">
+                    <input type="range" min="0" max="5" step="1" list="tickmarks" id="option_slider-shadow" class="range-slider">
+                    <datalist id="tickmarks">
+                        <option value="0">Мягкие</option>
+                        <option value="1">Средние</option>
+                        <option value="2">Жёсткие</option>
+                        <option value="3">Динамичные</option>
+                        <option value="4">Контрастные</option>
+                        <option value="5">Выключены</option>
+                    </datalist>
                 </div>
             </div>
         </div>
         <script>
-            <!-- preset-selector -->
+            // preset-selector
             function selectPreset(btn) {
                 document.querySelectorAll('.preset-btn-color').forEach(btn => {
                     if (btn.classList.contains('color-bottom-style')) {
@@ -66,6 +74,16 @@
                 });
                 btn.classList.add('color-bottom-style');
             }
+
+            // Тени, изменение статуса ивентом
+            document.getElementById("option_slider-shadow").addEventListener("input", () => {
+                const value = parseInt(document.getElementById("option_slider-shadow").value);
+                const text = document.getElementById("tickmarks").getElementsByTagName("option")[value]?.text || value;
+                document.getElementById("option_status-shadow").textContent = text;
+            });
+            // начальное значение
+            document.getElementById("option_slider-shadow").dispatchEvent(new Event("input"));
+
         </script>
 
         <div class="main-container image-example">
