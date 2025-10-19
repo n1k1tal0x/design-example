@@ -72,6 +72,8 @@ body {
 
 .main-content-padding {
     /* padding-bottom: 5%; */
+    overflow: auto;
+    flex-direction: column;
     padding: 5% 5% 5% 5%;
 }
 
@@ -179,6 +181,8 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    /* height: 140px; */
+    /* background-color: aqua; */
 }
 
 .range-slider {
@@ -199,4 +203,16 @@ body {
   border: 5px solid #fff;
   cursor: pointer;
   transition: all 0.4s ease;
+}
+
+.form-switch .form-check-input {
+  background-color: #333;
+  border: none;
+  width: 3em;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #DF4B2C;
 }

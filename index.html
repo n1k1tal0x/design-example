@@ -46,24 +46,92 @@
                 </div>
             </div>
             <div class="nav-splitline"></div>
-            <div class="full-height main-content-padding  nav-middle">
+            <div class="full-height main-content-padding nav-middle">
                 <div class="controler-settings" style="gap: 15px;">
                     <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
                         <span class="preset-title ads-title">Тени</span>
                         <span id="option_status-shadow" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
                     </div>
-                    <input type="range" min="0" max="5" step="1" list="tickmarks" id="option_slider-shadow" class="range-slider">
-                    <datalist id="tickmarks">
-                        <option value="0">Мягкие</option>
-                        <option value="1">Средние</option>
-                        <option value="2">Жёсткие</option>
-                        <option value="3">Динамичные</option>
-                        <option value="4">Контрастные</option>
-                        <option value="5">Выключены</option>
+                    <input type="range" min="0" max="5" step="1" list="tickmarks-shadow" id="option_slider-shadow" class="range-slider">
+                    <datalist id="tickmarks-shadow">
+                        <option value="0">Выключены</option>
+                        <option value="1">Мягкие</option>
+                        <option value="2">Средние</option>
+                        <option value="3">Жёсткие</option>
+                        <option value="4">Динамичные</option>
+                        <option value="5">Контрастные</option>
                     </datalist>
+                </div>
+
+                <div class="controler-settings" style="gap: 15px;">
+                    <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
+                        <span class="preset-title ads-title">Текстуры</span>
+                        <span id="option_status-textures" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
+                    </div>
+                    <input type="range" min="0" max="5" step="1" list="tickmarks-textures" id="option_slider-textures" class="range-slider">
+                    <datalist id="tickmarks-textures">
+                        <option value="0">Выключены</option>
+                        <option value="1">Мягкие</option>
+                        <option value="2">Средние</option>
+                        <option value="3">Жёсткие</option>
+                        <option value="4">Динамичные</option>
+                        <option value="5">Контрастные</option>
+                    </datalist>
+                </div>
+
+                <div class="controler-settings" style="gap: 15px;">
+                    <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
+                        <span class="preset-title ads-title">Освещение</span>
+                        <span id="option_status-light" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
+                    </div>
+                    <input type="range" min="0" max="5" step="1" list="tickmarks-light" id="option_slider-light" class="range-slider">
+                    <datalist id="tickmarks-light">
+                        <option value="0">Выключены</option>
+                        <option value="1">Мягкие</option>
+                        <option value="2">Средние</option>
+                        <option value="3">Жёсткие</option>
+                        <option value="4">Динамичные</option>
+                        <option value="5">Контрастные</option>
+                    </datalist>
+                </div>
+                <div class="controler-settings" style="gap: 15px;">
+                    <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
+                        <span class="preset-title ads-title">Деревья</span>
+                        <span id="option_status-tree" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
+                    </div>
+                    <input type="range" min="0" max="5" step="1" list="tickmarks-tree" id="option_slider-tree" class="range-slider">
+                    <datalist id="tickmarks-tree">
+                        <option value="0">Выключены</option>
+                        <option value="1">Мягкие</option>
+                        <option value="2">Средние</option>
+                        <option value="3">Жёсткие</option>
+                        <option value="4">Динамичные</option>
+                        <option value="5">Контрастные</option>
+                    </datalist>
+                </div>
+                <div class="controler-settings" style="gap: 15px;">
+                    <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
+                        <span class="preset-title ads-title">Отражения на воде</span>
+                        <span id="option_status-wather" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
+                    </div>
+                    <input type="range" min="0" max="2" step="1" list="tickmarks-wather" id="option_slider-wather" class="range-slider">
+                    <datalist id="tickmarks-wather">
+                        <option value="0">Выключены</option>
+                        <option value="1">Мягкие</option>
+                        <option value="2">Средние</option>
+                    </datalist>
+                </div>
+                <div class="controler-settings" style="gap: 15px;">
+                    <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
+                        <span class="preset-title ads-title">Тени у объектов</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheck">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
         <script>
             // preset-selector
             function selectPreset(btn) {
@@ -75,14 +143,32 @@
                 btn.classList.add('color-bottom-style');
             }
 
-            // Тени, изменение статуса ивентом
-            document.getElementById("option_slider-shadow").addEventListener("input", () => {
-                const value = parseInt(document.getElementById("option_slider-shadow").value);
-                const text = document.getElementById("tickmarks").getElementsByTagName("option")[value]?.text || value;
-                document.getElementById("option_status-shadow").textContent = text;
-            });
+            // Тени: изменение статуса
+            //document.getElementById("option_slider-shadow").addEventListener("input", () => {
+            //    const value = parseInt(document.getElementById("option_slider-shadow").value);
+            //    const text = document.getElementById("tickmarks-shadow").getElementsByTagName("option")[value]?.text || value;
+            //   document.getElementById("option_status-shadow").textContent = text;
+            //});
             // начальное значение
-            document.getElementById("option_slider-shadow").dispatchEvent(new Event("input"));
+            //document.getElementById("option_slider-shadow").dispatchEvent(new Event("input"));
+            
+            document.querySelectorAll('[id^="option_slider-"]').forEach(slider => {
+                const key = slider.id.split("option_slider-")[1]; // например "shadow"
+                const status = document.getElementById(`option_status-${key}`);
+                const tickmarks = document.getElementById(`tickmarks-${key}`)?.getElementsByTagName("option");
+
+                if (!status || !tickmarks) return; // если нет соответствующих элементов — пропускаем
+
+                // обработчик изменения значения
+                slider.addEventListener("input", () => {
+                    const value = parseInt(slider.value);
+                    const text = tickmarks[value]?.text || value;
+                    status.textContent = text;
+                });
+
+                // обновить при загрузке
+                slider.dispatchEvent(new Event("input"));
+            });
 
         </script>
 
