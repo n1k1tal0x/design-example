@@ -21,10 +21,10 @@
             </div>
             <div class="nav-splitline"></div> <!-- Можно нормально на разные div поделить, но делал на скорую руку -->
             <div class="nav-middle">
-                <div class="ads-div nav-links">
-                    <span class="ads-title">Улучши до Премиума</span>
-                    <span class="ads-text">Получи премиум-функции, обновив свой план</span>
-                    <button class="color-bottom-style ads-button current-link">Обновить</button>
+                <div class="premium-div nav-links">
+                    <span class="premium-title">Улучши до Премиума</span>
+                    <span class="premium-text">Получи премиум-функции, обновив свой план</span>
+                    <button class="color-bottom-style premium-button current-link">Обновить</button>
                 </div>  
             </div>
             <div class="nav-splitline"></div>
@@ -37,19 +37,19 @@
 
         <div class="main-container panel-content">
             <div class="preset-padding">
-                <span class="preset-title ads-title">Пресет</span>
+                <span class="preset-title premium-title">Пресет</span>
                 <div class="preset-selector">
-                    <button class="preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Низкие</button>
-                    <button class="preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Средние</button>
-                    <button class="preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Баланс</button>
-                    <button class="color-bottom-style preset-btn-color bottom-style ads-button current-link" onclick="selectPreset(this)">Ультра</button>
+                    <button class="preset-btn-color bottom-style premium-button current-link" onclick="selectPreset(this)">Низкие</button>
+                    <button class="preset-btn-color bottom-style premium-button current-link" onclick="selectPreset(this)">Средние</button>
+                    <button class="preset-btn-color bottom-style premium-button current-link" onclick="selectPreset(this)">Баланс</button>
+                    <button class="color-bottom-style preset-btn-color bottom-style premium-button current-link" onclick="selectPreset(this)">Ультра</button>
                 </div>
             </div>
             <div class="nav-splitline"></div>
             <div class="full-height main-content-padding nav-middle">
                 <div class="controler-settings" style="gap: 15px;">
                     <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
-                        <span class="preset-title ads-title">Тени</span>
+                        <span class="preset-title premium-title">Тени</span>
                         <span id="option_status-shadow" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
                     </div>
                     <input type="range" min="0" max="5" step="1" list="tickmarks-shadow" id="option_slider-shadow" class="range-slider">
@@ -65,7 +65,7 @@
 
                 <div class="controler-settings" style="gap: 15px;">
                     <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
-                        <span class="preset-title ads-title">Текстуры</span>
+                        <span class="preset-title premium-title">Текстуры</span>
                         <span id="option_status-textures" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
                     </div>
                     <input type="range" min="0" max="5" step="1" list="tickmarks-textures" id="option_slider-textures" class="range-slider">
@@ -81,7 +81,7 @@
 
                 <div class="controler-settings" style="gap: 15px;">
                     <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
-                        <span class="preset-title ads-title">Освещение</span>
+                        <span class="preset-title premium-title">Освещение</span>
                         <span id="option_status-light" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
                     </div>
                     <input type="range" min="0" max="5" step="1" list="tickmarks-light" id="option_slider-light" class="range-slider">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="controler-settings" style="gap: 15px;">
                     <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
-                        <span class="preset-title ads-title">Деревья</span>
+                        <span class="preset-title premium-title">Деревья</span>
                         <span id="option_status-tree" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
                     </div>
                     <input type="range" min="0" max="5" step="1" list="tickmarks-tree" id="option_slider-tree" class="range-slider">
@@ -111,7 +111,7 @@
                 </div>
                 <div class="controler-settings" style="gap: 15px;">
                     <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
-                        <span class="preset-title ads-title">Отражения на воде</span>
+                        <span class="preset-title premium-title">Отражения на воде</span>
                         <span id="option_status-wather" style="color: #5A5A5A; font-size:large;display: flex; align-items: center;">Мягкие</span>
                     </div>
                     <input type="range" min="0" max="2" step="1" list="tickmarks-wather" id="option_slider-wather" class="range-slider">
@@ -123,7 +123,7 @@
                 </div>
                 <div class="controler-settings" style="gap: 15px;">
                     <div class="controler-title" style="display: flex; flex-direction: row;justify-content: space-between;">
-                        <span class="preset-title ads-title">Тени у объектов</span>
+                        <span class="preset-title premium-title">Тени у объектов</span>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheck">
                         </div>
@@ -175,12 +175,12 @@
         <div class="main-container image-example">
             <div class="img-padding">
                 <div class="nav-links">
-                    <span class="ads-title">Описание</span>
-                    <span class="ads-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam perspiciatis maxime excepturi eius corporis suscipit quidem assumenda nobis minus pariatur. Quam quas error molestias magni repellat accusantium corrupti id est?</span>
+                    <span class="premium-title">Описание</span>
+                    <span class="premium-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam perspiciatis maxime excepturi eius corporis suscipit quidem assumenda nobis minus pariatur. Quam quas error molestias magni repellat accusantium corrupti id est?</span>
                 </div>
                 <div class="img-btns">
-                    <button class="reset-btn bottom-style ads-button current-link"><img class="img-btn" src="./static/update-icon-svgrepo-com.png" alt="" srcset=""></button>
-                    <button class="color-bottom-style ads-button current-link">Применить</button>
+                    <button class="reset-btn bottom-style premium-button current-link"><img class="img-btn" src="./static/update-icon-svgrepo-com.png" alt="" srcset=""></button>
+                    <button class="color-bottom-style premium-button current-link">Применить</button>
                 </div>
             </div>
         </div>

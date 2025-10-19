@@ -95,12 +95,12 @@ body {
     color: white;
 }
 
-.ads-title {
+.premium-title {
     color: white;
     font-size:x-large;
 }
 
-.ads-text {
+.premium-text {
     color: #5A5A5A;
     font-size:large;
 }
@@ -126,7 +126,7 @@ body {
     border-radius: 15px;
 }
 
-.ads-button {
+.premium-button {
     width: 100%;
 }
 
@@ -140,7 +140,7 @@ body {
     background-position: center; 
 }
 
-.ads-div {
+.premium-div {
     gap: 15px;
 }
 
